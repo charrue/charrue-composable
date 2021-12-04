@@ -1,0 +1,1 @@
+import{e as i,f as p,u as e}from"./app.3c545b48.js";const n=s=>s!=null;function m(s=!1,u){const o=()=>n(e(s))?e(s):!0,a=()=>n(e(u))?e(u):!o(),t=p(o()),f=c=>{if(n(e(c))){t.value=e(c);return}const g=t.value!==o()?o():a();t.value=g},r=()=>{t.value=o()},l=()=>{t.value=a()};return{state:i(()=>t.value),actions:{setLeft:r,setRight:l,toggle:f}}}export{m as u};
