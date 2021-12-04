@@ -1,5 +1,6 @@
 const base = process.env.NODE_ENV === 'production' ? '/charrue-composable' : '';
 const { resolve } = require('path');
+const sidebarConfig = require("./sidebar.json")
 
 module.exports = {
   title: 'Charrue Composable Document',
@@ -14,13 +15,7 @@ module.exports = {
   themeConfig: {
     // logo: '../logo.svg',
     nav: [{ text: '指南', link: './' }],
-    sidebar: [
-      { text: '介绍', link: './' },
-      { text: 'useToggle', link: './base/use-toggle/' },
-      { text: 'useBoolean', link: './base/use-boolean/' },
-      { text: 'useInterval', link: './base/use-interval/' },
-      { text: 'useDebounceFn', link: './base/use-debounce-fn/' },
-    ],
+    sidebar: sidebarConfig,
     search: {
       searchMaxSuggestions: 10,
     },

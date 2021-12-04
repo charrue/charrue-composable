@@ -7,7 +7,8 @@
   "scripts": {
     "build": "cd packages/composable && npm run build",
     "docs": "cd packages/docs && npm run dev",
-    "docs:deploy": "cd packages/docs && npm run docs-build-deploy"
+    "docs:deploy": "cd packages/docs && npm run docs-build-deploy",
+    "create-hook": "node scripts/create-hook.js"
   },
   "keywords": [],
   "author": "ckangwen",
@@ -17,7 +18,8 @@
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
     "eslint": "^8.3.0",
-    "eslint-config-charrue-base": "^0.1.3"
+    "eslint-config-charrue-base": "^0.1.3",
+    "prompts": "^2.4.2"
   },
   "workspaces": [
     "packages/*"

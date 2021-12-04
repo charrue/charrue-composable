@@ -9,12 +9,14 @@ importers:
       '@typescript-eslint/parser': ^5.5.0
       eslint: ^8.3.0
       eslint-config-charrue-base: ^0.1.3
+      prompts: ^2.4.2
     devDependencies:
       '@babel/eslint-parser': 7.16.3_eslint@8.3.0
       '@typescript-eslint/eslint-plugin': 5.5.0_43d6410db0148b56249a5963c6bb1a5b
       '@typescript-eslint/parser': 5.5.0_eslint@8.3.0
       eslint: 8.3.0
       eslint-config-charrue-base: 0.1.3_eslint@8.3.0
+      prompts: 2.4.2
 
   packages/composable:
     specifiers:

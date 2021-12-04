@@ -1,0 +1,45 @@
+---
+map:
+  path: /base/use-debounce
+---
+
+# useDebounce
+
+用来处理防抖值的 Hook。
+
+## 代码演示
+
+### 基础用法
+
+<demo src="./demo/demo1.vue"
+  language="vue"
+  title="基本用法"
+  desc="DebouncedValue 只会在输入结束 500ms 后变化。">
+</demo>
+
+
+## API
+
+```typescript
+const throttledValue = useDebounce(
+  value: Ref<any>,
+  wait: number,
+  options?: Options
+);
+```
+
+### Params
+
+| 参数    | 说明           | 类型      | 默认值 |
+|---------|----------------|-----------|--------|
+| value   | 需要防抖的值   | `any`     | -      |
+| wait     | 等待时间，单位为毫秒     | `number`  | `1000` |
+| options | 配置节流的行为 | `Options` | -      |
+
+### Options
+
+| 参数     | 说明                     | 类型      | 默认值 |
+|----------|--------------------------|-----------|--------|
+| leading  | 是否在延迟开始前调用函数 | `boolean` | `true` |
+| trailing | 是否在延迟开始后调用函数 | `boolean` | `true` |
+| maxWait | 最大等待时间，单位为毫秒 | `number` | - |
