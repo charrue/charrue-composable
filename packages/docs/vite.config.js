@@ -8,7 +8,6 @@ import { resolve } from 'path';
  * @type {import('vite').UserConfig}
  */
 export default {
-  base: "/charrue-composable/",
   optimizeDeps: {
     include: [],
     exclude: [],

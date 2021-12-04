@@ -1,4 +1,4 @@
-const base = process.env.NODE_ENV === 'production' ? '/docs' : '';
+const base = process.env.NODE_ENV === 'production' ? '/charrue-composable' : '';
 const { resolve } = require('path');
 
 module.exports = {
@@ -13,13 +13,13 @@ module.exports = {
   base,
   themeConfig: {
     // logo: '../logo.svg',
-    nav: [{ text: '指南', link: '/' }],
+    nav: [{ text: '指南', link: './' }],
     sidebar: [
-      { text: '介绍', link: '/' },
-      { text: 'useToggle', link: '/base/use-toggle/' },
-      { text: 'useBoolean', link: '/base/use-boolean/' },
-      { text: 'useInterval', link: '/base/use-interval/' },
-      { text: 'useDebounceFn', link: '/base/use-debounce-fn/' },
+      { text: '介绍', link: './' },
+      { text: 'useToggle', link: './base/use-toggle/' },
+      { text: 'useBoolean', link: './base/use-boolean/' },
+      { text: 'useInterval', link: './base/use-interval/' },
+      { text: 'useDebounceFn', link: './base/use-debounce-fn/' },
     ],
     search: {
       searchMaxSuggestions: 10,
