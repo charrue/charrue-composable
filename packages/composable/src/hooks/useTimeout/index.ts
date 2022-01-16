@@ -1,7 +1,6 @@
 import {
   unref,
   watchEffect,
-  getCurrentInstance,
 } from "vue-demi";
 import type { Ref } from "vue-demi";
 
@@ -12,12 +11,6 @@ function useTimeout(
 ): {
   stop: () => void,
 } {
-  if (!getCurrentInstance()) {
-    throw new Error(
-      "Invalid hook call: `useTimeout` can only be called inside of `setup()`.",
-    );
-  }
-
   let timer: NodeJS.Timer | null = null;
 
   const stop = () => {

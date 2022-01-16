@@ -1,5 +1,4 @@
 import {
-  getCurrentInstance,
   ref,
   unref,
   watch,
@@ -13,12 +12,6 @@ export default function useThrottle<T>(
   wait: number | Ref<number> = 1000,
   options: ThrottleOptions = {},
 ): Ref<UnwrapRef<T>> {
-  if (!getCurrentInstance()) {
-    throw new Error(
-      "Invalid hook call: `useThrottle` can only be called inside of `setup()`.",
-    );
-  }
-
   const throttledValue = ref(unref(value));
 
   const { run } = useThrottleFn(() => {

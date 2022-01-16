@@ -1,5 +1,4 @@
 import {
-  getCurrentInstance,
   ref,
   unref,
   watch,
@@ -13,12 +12,6 @@ export default function useDebounce<T>(
   wait: number | Ref<number> = 1000,
   options: DebounceOptions = {},
 ): Ref<UnwrapRef<T>> {
-  if (!getCurrentInstance()) {
-    throw new Error(
-      "Invalid hook call: `useDebounce` can only be called inside of `setup()`.",
-    );
-  }
-
   const throttledValue = ref(unref(value));
 
   const { run } = useDebounceFn(() => {

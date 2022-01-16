@@ -1,5 +1,4 @@
 import {
-  getCurrentInstance,
   readonly,
   unref,
   computed,
@@ -24,12 +23,6 @@ export default function useDebounceFn<T extends noop>(
   cancel: () => void,
   flush: () => ReturnType<T> | undefined,
 } {
-  if (!getCurrentInstance()) {
-    throw new Error(
-      "Invalid hook call: `useDebounceFn` can only be called inside of `setup()`.",
-    );
-  }
-
   const debounced = computed(() => debounce(fn, unref(wait), options));
 
   return {

@@ -1,5 +1,4 @@
 import {
-  getCurrentInstance,
   unref,
   computed,
 } from "vue-demi";
@@ -22,12 +21,6 @@ export default function useThrottleFn<T extends noop>(
   cancel: () => void,
   flush: () => ReturnType<T> | undefined,
 } {
-  if (!getCurrentInstance()) {
-    throw new Error(
-      "Invalid hook call: `useThrottleFn` can only be called inside of `setup()`.",
-    );
-  }
-
   const throttled = computed(() => throttle(fn, unref(wait), options));
 
   return {
