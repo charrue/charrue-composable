@@ -1,19 +1,17 @@
-import useToggle from "./hooks/useToggle/index";
 import useBoolean from "./hooks/useBoolean/index";
-import useInterval from "./hooks/useInterval/index";
-import useTimeout from "./hooks/useTimeout/index";
-import useDebounceFn from "./hooks/useDebounceFn/index";
-import useThrottleFn from "./hooks/useThrottleFn/index";
-import useThrottle from "./hooks/useThrottle/index";
-import useDebounce from "./hooks/useDebounce/index";
+import useToggle from "./hooks/useToggle/index";
+import useControlledProp from "./hooks/useControlledProp";
+import useDebounceRef from "./hooks/useDebounceRef";
+import useScroll from "./hooks/useScroll";
+import useTemplateRef from "./hooks/useTemplateRef";
+import useThrottleRef from "./hooks/useThrottleRef";
 
 export {
-  useToggle,
   useBoolean,
-  useInterval,
-  useTimeout,
-  useDebounceFn,
-  useThrottleFn,
-  useThrottle,
-  useDebounce,
+  useToggle,
+  useControlledProp,
+  useDebounceRef,
+  useScroll,
+  useTemplateRef,
+  useThrottleRef,
 };
