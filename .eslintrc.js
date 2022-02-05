@@ -9,11 +9,12 @@ module.exports = {
     ecmaVersion: 8,
     requireConfigFile: false,
   },
-  extends: ["eslint-config-charrue-base"],
+  extends: ["@charrue/base"],
   rules: {
     "no-console": "off",
     "no-debugger": "error",
     "max-statements": "off",
+    "init-declarations": "off",
   },
   overrides: [
     {
@@ -31,6 +32,7 @@ module.exports = {
         },
       },
       rules: {
+        "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/no-empty-function": "off",
       },
     },

@@ -31,7 +31,7 @@
     "release": "np"
   },
   "devDependencies": {
-    "@charrue/composable": "workspace:^0.0.1",
+    "@charrue/composable": "workspace:*",
     "@ls-lint/ls-lint": "^1.9.2",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@types/jest": "^26.0.15",

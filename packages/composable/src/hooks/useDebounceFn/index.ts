@@ -6,19 +6,16 @@ import {
 import debounce from "lodash/debounce";
 import type { DebouncedFunc } from "lodash";
 
-type noop = (...args: any[]) => any;
-
 export interface DebounceOptions {
   leading?: boolean;
   trailing?: boolean;
   maxWait?: number;
 }
 
-export default function useDebounceFn<T extends noop>(
+export default function useDebounceFn<T extends(...args: any[]) => any>(
   fn: T,
   wait = 1000,
-  options: DebounceOptions = {},
-): {
+  options: DebounceOptions = {}): {
   run: DebouncedFunc<T>,
   cancel: () => void,
   flush: () => ReturnType<T> | undefined,

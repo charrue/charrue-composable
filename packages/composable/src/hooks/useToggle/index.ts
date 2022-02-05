@@ -6,9 +6,9 @@ import {
 import type { UnwrapRef, ComputedRef } from "vue-demi";
 import { isDef } from "../../utils/index";
 
-type IState = string | number | boolean | undefined;
+type ToggleStateType = string | number | boolean | undefined;
 
-export interface Actions<T = IState> {
+interface UseToggleActions<T = ToggleStateType> {
   setLeft: () => void;
   setRight: () => void;
   toggle: (value?: T) => void;
@@ -16,23 +16,26 @@ export interface Actions<T = IState> {
 
 function useToggle<T = boolean | undefined>(): {
   state: ComputedRef<boolean>,
-  actions: Actions<T>
+  actions: UseToggleActions<T>
 };
 
-function useToggle<T = IState>(defaultValue: T): {
+function useToggle<T = ToggleStateType>(defaultValue: T): {
   state: ComputedRef<T>,
-  actions: Actions<T>
+  actions: UseToggleActions<T>
 };
 
-function useToggle<T = IState, U = IState>(
+function useToggle<T = ToggleStateType, U = ToggleStateType>(
   defaultValue: T,
   reverseValue: U,
 ): {
   state: ComputedRef<T | U>,
-  actions: Actions<T | U>
+  actions: UseToggleActions<T | U>
 };
 
-function useToggle<D extends IState = IState, R extends IState = IState>(
+function useToggle<
+  D extends ToggleStateType = ToggleStateType,
+  R extends ToggleStateType = ToggleStateType
+>(
   defaultValue: D = false as D,
   reverseValue?: R,
 ) {

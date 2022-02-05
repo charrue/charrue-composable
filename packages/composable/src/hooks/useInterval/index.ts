@@ -6,14 +6,13 @@ import {
 } from "vue-demi";
 import type { Ref } from "vue-demi";
 
-type DelayParam = number | null | undefined
 type OptionParam = {
   immediate?: boolean
 }
 
 function useInterval(
   fn: () => void,
-  delay: DelayParam | Ref<DelayParam>,
+  delay: number | undefined | Ref<number | undefined>,
   options: OptionParam = { immediate: false },
 ): {
   stop: () => void,

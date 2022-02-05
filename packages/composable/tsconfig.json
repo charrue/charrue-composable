@@ -15,7 +15,8 @@
     "baseUrl": ".",
     "jsx": "preserve",
     "skipLibCheck": true,
-    "noUnusedLocals": true
+    "skipDefaultLibCheck": true,
+    "noUnusedLocals": true,
   },
   "exclude": [
     "node_modules",

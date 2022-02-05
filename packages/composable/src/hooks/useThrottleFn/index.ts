@@ -5,18 +5,15 @@ import {
 import throttle from "lodash/throttle";
 import type { DebouncedFunc } from "lodash";
 
-type noop = (...args: any[]) => any;
-
 export interface ThrottleOptions {
   leading?: boolean;
   trailing?: boolean;
 }
 
-export default function useThrottleFn<T extends noop>(
+export default function useThrottleFn<T extends(...args: any[]) => any>(
   fn: T,
   wait = 1000,
-  options: ThrottleOptions = {},
-): {
+  options: ThrottleOptions = {}): {
   run: DebouncedFunc<T>,
   cancel: () => void,
   flush: () => ReturnType<T> | undefined,

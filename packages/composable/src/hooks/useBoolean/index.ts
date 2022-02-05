@@ -1,15 +1,15 @@
 import type { ComputedRef } from "vue-demi";
 import useToggle from "../useToggle/index";
 
-type IState = boolean | undefined;
-
-export interface Actions<T = IState> {
+export interface UseBooleanActions<T = boolean | undefined> {
   setTrue: () => void;
   setFalse: () => void;
   toggle: (value?: T) => void;
 }
 
-function useBoolean(defaultValue = false): { state: ComputedRef<boolean>, actions: Actions } {
+function useBoolean(
+  defaultValue = false,
+):{ state: ComputedRef<boolean>, actions: UseBooleanActions } {
   const { state, actions } = useToggle(defaultValue);
 
   return {
@@ -17,7 +17,7 @@ function useBoolean(defaultValue = false): { state: ComputedRef<boolean>, action
     actions: {
       setTrue: () => actions.toggle(true),
       setFalse: () => actions.toggle(false),
-      toggle: (value?: IState) => actions.toggle(value),
+      toggle: (value?: boolean | undefined) => actions.toggle(value),
     },
   };
 }
