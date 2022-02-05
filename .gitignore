@@ -1,6 +1,5 @@
 node_modules
 .next
-dist
 tsconfig.tsbuildinfo
 .idea
 .vscode
