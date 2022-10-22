@@ -1,0 +1,35 @@
+import { defineConfig } from 'vitepress'
+
+const Guide = [
+  { text: 'Get Started', link: '/guide/' },
+]
+
+const  CoreCategories = [
+  { text: "useCounter", link: "/composable/useCounter/" }
+]
+
+const DefaultSideBar = [
+  { text: 'Guide', items: Guide },
+  { text: 'Core', items: CoreCategories },
+]
+
+export default defineConfig({
+  title: 'Charrue Composable',
+  description: 'Collection of essential Vue Composition Utilities',
+
+  themeConfig: {
+    logo: '/logo.svg',
+
+    nav: [
+      {
+        text: 'Guide',
+        items: [
+          { text: 'Guide', link: "/guide/" },
+        ],
+      },
+    ],
+    sidebar: {
+      '/guide/': DefaultSideBar,
+    },
+  },
+})

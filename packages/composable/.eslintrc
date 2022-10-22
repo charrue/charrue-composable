@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "@charrue/vue3",
+    "../../.eslintrc"
+  ]
+}
