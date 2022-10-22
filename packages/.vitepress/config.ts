@@ -5,7 +5,7 @@ const Guide = [
 ]
 
 const  CoreCategories = [
-  { text: "useCounter", link: "/composable/useCounter/" }
+  { text: "useProp", link: "/composable/useProp/" }
 ]
 
 const DefaultSideBar = [
